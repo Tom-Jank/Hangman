@@ -1,4 +1,7 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 public class fileHandler {
     protected static void createHangmanWordDatabase() {
@@ -24,6 +27,21 @@ public class fileHandler {
         catch(Exception e) {
             e.printStackTrace();
         }
-
+    }
+    protected static String selectRandomBuzzword() {
+        try {
+            List<String> database = new ArrayList<String>();
+            File DATABASE = new File("DATABASE.txt");
+            Scanner reader = new Scanner(DATABASE);
+            while (reader.hasNextLine()) {
+                database.add(reader.nextLine());
+            }
+            int randomBuzzword = new Random().nextInt(database.size());
+            return database.get(randomBuzzword);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return "Something went wrong...";
+        }
     }
 }
