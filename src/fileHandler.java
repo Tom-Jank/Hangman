@@ -8,6 +8,7 @@ public class fileHandler {
             File newFile = new File("DATABASE.txt");
             if (newFile.createNewFile()) System.out.println("File created");
             else System.out.println("File already exists");
+
         }
         catch(Exception e) {
             e.printStackTrace();
