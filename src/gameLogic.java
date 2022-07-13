@@ -2,7 +2,7 @@ public class gameLogic {
     public boolean isStillPlaying;
     public int playerLifeCounter;
     public gameLogic() {
-        playerLifeCounter = 8;
+        playerLifeCounter = 7;
         isStillPlaying = true;
     }
     protected static boolean checkIfPlayerIsCorrect(String buzzword, char userInput) {

@@ -8,6 +8,7 @@ public class Session {
             char answer = TUI.gameMenu();
             boolean isUserCorrect = gameLogic.checkIfPlayerIsCorrect(buzzword,answer);
             if(!isUserCorrect){
+                TUI.drawHangmanPic(player.playerLifeCounter);
                 player.playerLifeCounter -= 1;
                 if(player.playerLifeCounter == 0) player.isStillPlaying = false;
             }

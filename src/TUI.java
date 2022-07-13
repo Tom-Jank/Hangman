@@ -73,4 +73,72 @@ public class TUI {
         char nextTODO = sc.nextLine().toUpperCase().charAt(0);
         return nextTODO;
     }
+    protected static void drawHangmanPic(int lives) {
+        System.out.println(hangmanPics[7-lives]);
+    }
+    public static String[] hangmanPics = {
+            """
+                                    +---+
+                                    |   |
+                                        |
+                                        |
+                                        |
+                                        |
+                                    =========
+                                    """,
+            """
+                                    +---+
+                                    |   |
+                                    O   |
+                                        |
+                                        |
+                                        |
+                                    =========
+                                    """,
+            """
+                                    +---+
+                                    |   |
+                                    O   |
+                                    |   |
+                                        |
+                                        |
+                                    =========
+                                    """,
+            """
+                                    +---+
+                                    |   |
+                                    O   |
+                                   /|   |
+                                        |
+                                        |
+                                    =========
+                                    """,
+            """
+                                    +---+
+                                    |   |
+                                    O/  |
+                                   /|   |
+                                        |
+                                        |
+                                    =========
+                                    """,
+            """
+                                    +---+
+                                    |   |
+                                    O/  |
+                                   /|   |
+                                   /    |
+                                        |
+                                    =========
+                                    """,
+            """
+                                    +---+
+                                    |   |
+                                    O/  |
+                                   /|   |
+                                   / |  |
+                                        |
+                                    =========
+                                    """,
+    };
 }
