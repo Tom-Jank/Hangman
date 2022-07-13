@@ -1,6 +1,8 @@
 public class gameLogic {
+    public boolean isStillPlaying;
+    public int playerLifeCounter;
     public gameLogic() {
-        int playerLifeCounter = 8;
-        boolean isStillPlaying = true;
+        playerLifeCounter = 8;
+        isStillPlaying = true;
     }
 }

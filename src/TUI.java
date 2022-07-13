@@ -8,19 +8,28 @@ public class TUI {
         }
         return mappedBuzzword;
     }
-    protected  static int userMainUI() {
+    protected  static char userMainUI() {
         String userMainUI = """
                                ********************
-                               1. ADD A BUZZWORD.
-                               2. START THE GAME
+                               1. START THE GAME
+                               2. ADD A BUZZWORD
                                ********************""";
         System.out.println(userMainUI);
-        int decision = getUserInput();
+        char decision = getUserInput();
         return decision;
     }
-    protected static int getUserInput() {
+    protected static void gameMenu() {
+        String gameMenu = """
+                Insert a letter: """;
         Scanner sc = new Scanner(System.in);
-        int nextTODO = sc.nextInt();
+    }
+    protected static boolean isUserCorrect() {
+
+        return false;
+    }
+    protected static char getUserInput() {
+        Scanner sc = new Scanner(System.in);
+        char nextTODO = sc.nextLine().charAt(0);
         return nextTODO;
     }
 }
