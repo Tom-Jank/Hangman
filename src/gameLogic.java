@@ -10,12 +10,6 @@ public class gameLogic {
         else return true;
     }
     protected static String updatePlayerProgress(String buzzword, char userInput, String mappedBuzzword) {
-        //for (int i = 0; i <= buzzword.length(); i++) {
-        //    if (buzzword.charAt(i) == userInput)
-        //        mappedBuzzword = mappedBuzzword.substring(0, i) + userInput + mappedBuzzword.substring(i + 1);
-         //   return mappedBuzzword;
-        //}
-
         if (buzzword.indexOf(userInput) != -1) {
             int index = buzzword.indexOf(userInput);
             while (index != -1) {
@@ -24,5 +18,13 @@ public class gameLogic {
             }
         }
         return mappedBuzzword;
+    }
+    protected static boolean checkPlayerProgress(String mappedString) {
+        if(!mappedString.contains("_")) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

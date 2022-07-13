@@ -25,8 +25,7 @@ public class TUI {
         char userInput = getUserInput();
         return userInput;
     }
-    protected static void resultInformation(boolean result) {
-        if(result) {
+    protected static void resultInformationIfWon() {
             System.out.println("""
                     
                      __      __                         __       __  __          \s
@@ -42,9 +41,14 @@ public class TUI {
                                                                                  \s
                                                                                  \s
                     """);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
-        else {
-            System.out.println("""
+    }
+    protected static void resultInformationIfLost() {
+        System.out.println("""
                     
                     $$\\     $$\\                         $$\\                                   \s
                     \\$$\\   $$  |                        $$ |                                  \s
@@ -58,15 +62,15 @@ public class TUI {
                                                                                               \s
                                                                                               \s
                     """);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
-    }
-    protected static boolean isUserCorrect() {
-
-        return false;
     }
     protected static char getUserInput() {
         Scanner sc = new Scanner(System.in);
-        char nextTODO = sc.nextLine().charAt(0);
+        char nextTODO = sc.nextLine().toUpperCase().charAt(0);
         return nextTODO;
     }
 }

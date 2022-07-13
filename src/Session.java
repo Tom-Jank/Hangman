@@ -13,8 +13,13 @@ public class Session {
             }
             else {
                 mappedBuzzword = gameLogic.updatePlayerProgress(buzzword,answer,mappedBuzzword);
+                if(gameLogic.checkPlayerProgress(mappedBuzzword) == true) {
+                    TUI.resultInformationIfWon();
+                    break;
+                }
             }
             if(!player.isStillPlaying){
+                TUI.resultInformationIfLost();
                 break;
             }
             try {
