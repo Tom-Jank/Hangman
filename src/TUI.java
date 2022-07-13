@@ -18,10 +18,12 @@ public class TUI {
         char decision = getUserInput();
         return decision;
     }
-    protected static void gameMenu() {
+    protected static char gameMenu() {
         String gameMenu = """
                 Insert a letter: """;
-        Scanner sc = new Scanner(System.in);
+        System.out.print(gameMenu);
+        char userInput = getUserInput();
+        return userInput;
     }
     protected static boolean isUserCorrect() {
 
