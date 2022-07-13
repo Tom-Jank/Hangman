@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         fileHandler.createHangmanWordDatabase();
         fileHandler.writeBuzzwordToDatabase();
-        System.out.println(fileHandler.selectRandomBuzzword());
+        String buzzword = fileHandler.selectRandomBuzzword();
+        System.out.println(TUI.returnMappedBuzzword(buzzword));
     }
 }
