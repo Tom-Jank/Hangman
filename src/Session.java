@@ -20,7 +20,7 @@ public class Session {
                     break;
                 }
             }
-            //Update hidden buzzword and chceck if user has won or keeps playing
+            //Update hidden buzzword and check if user has won or keeps playing
             else {
                 mappedBuzzword = gameLogic.updatePlayerProgress(buzzword,answer,mappedBuzzword);
                 if(gameLogic.checkPlayerProgress(mappedBuzzword)) {
@@ -28,11 +28,7 @@ public class Session {
                     break;
                 }
             }
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            Thread.yield();
         }
     }
 }
