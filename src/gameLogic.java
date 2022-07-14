@@ -6,8 +6,7 @@ public class gameLogic {
         isStillPlaying = true;
     }
     protected static boolean checkIfPlayerIsCorrect(String buzzword, char userInput) {
-        if(buzzword.indexOf(userInput) < 0) return false;
-        else return true;
+        return buzzword.indexOf(userInput) >= 0;
     }
     protected static String updatePlayerProgress(String buzzword, char userInput, String mappedBuzzword) {
         if (buzzword.indexOf(userInput) != -1) {
@@ -20,11 +19,6 @@ public class gameLogic {
         return mappedBuzzword;
     }
     protected static boolean checkPlayerProgress(String mappedString) {
-        if(!mappedString.contains("_")) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return !mappedString.contains("_");
     }
 }
