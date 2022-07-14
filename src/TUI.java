@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class TUI {
     protected static String returnMappedBuzzword(String buzzword) {
-        String mappedBuzzword = "";
+        StringBuilder mappedBuzzword = new StringBuilder();
         for (int i = 0; i < buzzword.length(); i++) {
-            if (buzzword.charAt(i) == ' ') mappedBuzzword += ' ';
-            else mappedBuzzword += '_';
+            if (buzzword.charAt(i) == ' ') mappedBuzzword.append(' ');
+            else mappedBuzzword.append('_');
         }
-        return mappedBuzzword;
+        return mappedBuzzword.toString();
     }
 
     protected static char getUserInput() {

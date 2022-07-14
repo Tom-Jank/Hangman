@@ -21,7 +21,7 @@ public class fileHandler {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Enter buzzword: ");
             String buzzword = scanner.nextLine().trim().toUpperCase();
-            writer.append(buzzword + "\n");
+            writer.append(buzzword).append("\n");
             writer.close();
         }
         catch(Exception e) {
@@ -30,7 +30,7 @@ public class fileHandler {
     }
     protected static String selectRandomBuzzword() {
         try {
-            List<String> database = new ArrayList<String>();
+            List<String> database = new ArrayList<>();
             File DATABASE = new File("DATABASE.txt");
             Scanner reader = new Scanner(DATABASE);
             while (reader.hasNextLine()) {

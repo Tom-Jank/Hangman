@@ -17,6 +17,7 @@ public class Session {
                 if(player.playerLifeCounter == 0) {
                     player.isStillPlaying = false;
                     TUI.resultInformationIfLost();
+                    System.out.println("Your buzzword: " + buzzword);
                     break;
                 }
             }
