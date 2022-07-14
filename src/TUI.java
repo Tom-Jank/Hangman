@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class TUI {
     protected static String returnMappedBuzzword(String buzzword) {
-        String mappedBuzzword = new String();
+        String mappedBuzzword = "";
         for (int i = 0; i < buzzword.length(); i++) {
             if (buzzword.charAt(i) == ' ') mappedBuzzword += ' ';
             else mappedBuzzword += '_';
@@ -11,8 +11,8 @@ public class TUI {
 
     protected static char getUserInput() {
         Scanner sc = new Scanner(System.in);
-        char nextTODO = sc.nextLine().toUpperCase().charAt(0);
-        return nextTODO;
+        //char nextTODO = sc.nextLine().toUpperCase().charAt(0);
+        return sc.nextLine().toUpperCase().charAt(0);
     }
 
     protected static char userMainUI() {
@@ -22,16 +22,16 @@ public class TUI {
                 2. ADD A BUZZWORD
                 ********************""";
         System.out.println(userMainUI);
-        char decision = getUserInput();
-        return decision;
+        //char decision = getUserInput();
+        return getUserInput();
     }
 
     protected static char gameMenu() {
         String gameMenu = """
-                Insert a letter: """;
+                Insert a letter:\t""";
         System.out.print(gameMenu);
-        char userInput = getUserInput();
-        return userInput;
+        //char userInput = getUserInput();
+        return getUserInput();
     }
 
     protected static void drawHangmanPic(int lives) {
