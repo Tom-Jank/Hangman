@@ -1,3 +1,5 @@
+package main.java;
+
 public class gameLogic {
     public boolean isStillPlaying;
     public int playerLifeCounter;

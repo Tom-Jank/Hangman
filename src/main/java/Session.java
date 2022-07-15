@@ -1,3 +1,5 @@
+package main.java;
+
 public class Session {
     protected static void initializeAndManageSession() {
         //Initialize new player

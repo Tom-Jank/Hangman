@@ -1,3 +1,4 @@
+package main.java;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,8 +10,7 @@ public class Main {
             switch (decision) {
                 case '1' -> Session.initializeAndManageSession();
                 case '2' -> fileHandler.writeBuzzwordToDatabase();
-                default -> {
-                }
+                default -> System.out.println("Not an option :(");
             }
         }
     }

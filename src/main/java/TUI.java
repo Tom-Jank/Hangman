@@ -1,3 +1,5 @@
+package main.java;
+
 import java.util.Scanner;
 public class TUI {
     protected static String returnMappedBuzzword(String buzzword) {
